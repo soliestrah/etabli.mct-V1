@@ -6,7 +6,7 @@
    ne touche à aucune variable de couleur, seulement à la disposition.
    ========================================================================= */
 
-main{ padding-top:0; }
+ main{ padding-top:0; }
 
 /* ---- Fond du panneau : bois sombre avec un léger grain ---- */
 body.theme-etabli{
