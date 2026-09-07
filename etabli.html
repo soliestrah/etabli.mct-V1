@@ -15,16 +15,21 @@
 <script src="assets/nav.js" defer></script>
 
 <header class="hero">
-  <div class="profile-card">
-    <img class="profile-skin" id="hero-skin" alt="Skin de N3SK3" width="64" height="64">
-    <div class="profile-body">
-      <div class="profile-name">N3SK3</div>
-      <div class="hero-server-status">
-        <span class="dot"></span>
-        <span>Serveur Aternos — connexion à venir</span>
+  <div class="hero-board">
+    <div class="profile-parchment">
+      <div class="profile-frame">
+        <span class="frame-glow" aria-hidden="true"></span>
+        <img class="profile-skin" id="hero-skin" alt="Skin de N3SK3" width="56" height="56">
       </div>
-      <div class="profile-stats" id="profile-stats">
-        <div class="profile-stat-empty">Stats du monde pas encore chargées — dépose <code>stats-config.json</code> à la racine du site.</div>
+      <div class="profile-body">
+        <div class="profile-name">N3SK3</div>
+        <div class="hero-server-status">
+          <span class="dot"></span>
+          <span>Serveur Aternos — connexion à venir</span>
+        </div>
+        <div class="profile-stats" id="profile-stats">
+          <div class="profile-stat-empty">Stats du monde pas encore chargées — dépose <code>stats-config.json</code> à la racine du site.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -32,12 +37,17 @@
 
 <main>
 
+  <div class="board-intro">
+    <h2>Le panneau</h2>
+    <p>Ce qui bouge sur le serveur en ce moment, résumé en un coup d'œil.</p>
+  </div>
+
   <div class="widgets-grid">
 
     <div class="widget" id="widget-carnet">
       <div class="widget-head">
         <h3>📓 Carnet</h3>
-        <a href="carnet.html">Ouvrir →</a>
+        <a href="carnet.html">Ouvrir</a>
       </div>
       <ul class="widget-list" id="carnet-list"></ul>
     </div>
@@ -45,7 +55,7 @@
     <div class="widget" id="widget-atlas">
       <div class="widget-head">
         <h3>🗺️ Atlas</h3>
-        <a href="atlas.html">Ouvrir →</a>
+        <a href="atlas.html">Ouvrir</a>
       </div>
       <ul class="widget-list" id="atlas-list"></ul>
     </div>
@@ -53,7 +63,7 @@
     <div class="widget" id="widget-projets">
       <div class="widget-head">
         <h3>🧱 Projets en cours</h3>
-        <a href="projets.html">Ouvrir →</a>
+        <a href="projets.html">Ouvrir</a>
       </div>
       <div class="widget-progress-row" id="projets-list"></div>
     </div>
@@ -61,7 +71,7 @@
     <div class="widget" id="widget-inventaire">
       <div class="widget-head">
         <h3>📦 Inventaire</h3>
-        <a href="inventaire.html">Ouvrir →</a>
+        <a href="inventaire.html">Ouvrir</a>
       </div>
       <div class="widget-stat-row" id="inventaire-stats"></div>
     </div>
@@ -69,7 +79,7 @@
     <div class="widget" id="widget-conteneurs">
       <div class="widget-head">
         <h3>🧳 Shulkers & Enderchests</h3>
-        <a href="inventaire.html">Voir l'inventaire →</a>
+        <a href="inventaire.html">Voir l'inventaire</a>
       </div>
       <ul class="widget-list" id="conteneurs-list"></ul>
     </div>
@@ -79,45 +89,61 @@
   <section class="gear-section">
     <div class="widget-head">
       <h3>📖 Ton stuff</h3>
-      <a href="grimoire.html">Ouvrir le Grimoire →</a>
+      <a href="grimoire.html">Ouvrir le Grimoire</a>
     </div>
-    <p style="margin:0; font-size:0.82rem;">Survole (ou touche) une pièce d'équipement pour voir ses enchantements.</p>
+    <p>Survole (ou touche) une pièce d'équipement pour voir ses enchantements.</p>
     <div class="gear-grid" id="gear-grid"></div>
     <div class="gear-detail" id="gear-detail"></div>
   </section>
 
   <section class="tools-section">
     <h2>Tous les outils</h2>
-    <div class="grid">
+    <p>Chaque outil garde ses propres notes ; ils partagent juste le même établi.</p>
+    <div class="tool-index">
 
-      <a class="tool-card card" href="atlas.html" style="--card-accent:var(--blue);">
-        <div class="card-title">🗺️ Atlas</div>
-        <p class="card-desc">Points de destination, hub, direction et distance à creuser.</p>
-        <div class="card-cta">Ouvrir l'outil →</div>
+      <a class="tool-row" href="atlas.html" style="--row-accent:var(--blue);">
+        <span class="tool-row-icon">🗺️</span>
+        <span class="tool-row-body">
+          <span class="tool-row-title">Atlas</span>
+          <span class="tool-row-desc">Points de destination, hub, direction et distance à creuser.</span>
+        </span>
+        <span class="tool-row-meta">Ouvrir</span>
       </a>
 
-      <a class="tool-card card" href="grimoire.html" style="--card-accent:var(--purple);">
-        <div class="card-title">📖 Grimoire</div>
-        <p class="card-desc">Enchantements, offres des villageois, build idéal.</p>
-        <div class="card-cta">Ouvrir l'outil →</div>
+      <a class="tool-row" href="grimoire.html" style="--row-accent:var(--purple);">
+        <span class="tool-row-icon">📖</span>
+        <span class="tool-row-body">
+          <span class="tool-row-title">Grimoire</span>
+          <span class="tool-row-desc">Enchantements, offres des villageois, build idéal.</span>
+        </span>
+        <span class="tool-row-meta">Ouvrir</span>
       </a>
 
-      <a class="tool-card card" href="carnet.html" style="--card-accent:var(--green);">
-        <div class="card-title">📓 Carnet</div>
-        <p class="card-desc">Projets, idées, rappels, à cocher au fur et à mesure.</p>
-        <div class="card-cta">Ouvrir l'outil →</div>
+      <a class="tool-row" href="carnet.html" style="--row-accent:var(--green);">
+        <span class="tool-row-icon">📓</span>
+        <span class="tool-row-body">
+          <span class="tool-row-title">Carnet</span>
+          <span class="tool-row-desc">Projets, idées, rappels, à cocher au fur et à mesure.</span>
+        </span>
+        <span class="tool-row-meta">Ouvrir</span>
       </a>
 
-      <a class="tool-card card" href="inventaire.html" style="--card-accent:var(--red);">
-        <div class="card-title">📦 Inventaire</div>
-        <p class="card-desc">L'état des lieux de ton stock, hors du jeu.</p>
-        <div class="card-cta">Ouvrir l'outil →</div>
+      <a class="tool-row" href="inventaire.html" style="--row-accent:var(--red);">
+        <span class="tool-row-icon">📦</span>
+        <span class="tool-row-body">
+          <span class="tool-row-title">Inventaire</span>
+          <span class="tool-row-desc">L'état des lieux de ton stock, hors du jeu.</span>
+        </span>
+        <span class="tool-row-meta">Ouvrir</span>
       </a>
 
-      <a class="tool-card card" href="projets.html" style="--card-accent:var(--gold);">
-        <div class="card-title">🧱 Projets</div>
-        <p class="card-desc">Ce qu'il te manque, calculé depuis ton inventaire.</p>
-        <div class="card-cta">Ouvrir l'outil →</div>
+      <a class="tool-row" href="projets.html" style="--row-accent:var(--gold);">
+        <span class="tool-row-icon">🧱</span>
+        <span class="tool-row-body">
+          <span class="tool-row-title">Projets</span>
+          <span class="tool-row-desc">Ce qu'il te manque, calculé depuis ton inventaire.</span>
+        </span>
+        <span class="tool-row-meta">Ouvrir</span>
       </a>
 
     </div>
@@ -142,7 +168,7 @@
         wrap.innerHTML = '<div class="profile-stat-empty">Aucune donnée de joueur dans stats-config.json.</div>';
         return;
       }
-      const stat = (n, l) => `<div class="profile-stat"><div class="n">${n}</div><div class="l">${l}</div></div>`;
+      const stat = (n, l) => `<div class="profile-stat"><span class="n">${n}</span><span class="l">${l}</span></div>`;
       wrap.innerHTML = [
         p.playTimeHours != null ? stat(Math.round(p.playTimeHours) + 'h', 'jouées') : '',
         p.distanceTotalKm != null ? stat(p.distanceTotalKm.toLocaleString('fr-FR', {maximumFractionDigits:1}) + ' km', 'parcourus') : '',
@@ -170,7 +196,7 @@
       const todo = entries.filter(e => !e.done).slice(0, 5);
       const list = document.getElementById('carnet-list');
       if (todo.length === 0){
-        list.innerHTML = '<li class="widget-empty" style="background:none; padding:10px 0;">Rien en attente — tout est fait 🎉</li>';
+        list.innerHTML = '<li class="widget-empty">Rien en attente — tout est fait 🎉</li>';
         return;
       }
       list.innerHTML = todo.map(e => `
@@ -181,7 +207,7 @@
       `).join('');
     })
     .catch(() => {
-      document.getElementById('carnet-list').innerHTML = '<li class="widget-offline" style="background:none; padding:10px 0;">Carnet non trouvé.</li>';
+      document.getElementById('carnet-list').innerHTML = '<li class="widget-offline">Carnet non trouvé.</li>';
     });
 
   // ===================== WIDGET : ATLAS =====================
@@ -192,11 +218,11 @@
       const todo = points.filter(p => !p.isHub && !p.built).slice(0, 5);
       const list = document.getElementById('atlas-list');
       if (points.length === 0){
-        list.innerHTML = '<li class="widget-empty" style="background:none; padding:10px 0;">Aucun point pour l\'instant.</li>';
+        list.innerHTML = '<li class="widget-empty">Aucun point pour l\'instant.</li>';
         return;
       }
       if (todo.length === 0){
-        list.innerHTML = '<li class="widget-empty" style="background:none; padding:10px 0;">Tous les tunnels sont creusés 🎉</li>';
+        list.innerHTML = '<li class="widget-empty">Tous les tunnels sont creusés 🎉</li>';
         return;
       }
       list.innerHTML = todo.map(p => `
@@ -207,7 +233,7 @@
       `).join('');
     })
     .catch(() => {
-      document.getElementById('atlas-list').innerHTML = '<li class="widget-offline" style="background:none; padding:10px 0;">Atlas non trouvé.</li>';
+      document.getElementById('atlas-list').innerHTML = '<li class="widget-offline">Atlas non trouvé.</li>';
     });
 
   // ===================== WIDGET : PROJETS (+ Inventaire pour le calcul) =====================
@@ -275,10 +301,9 @@
       const containers = Array.isArray(data.containers) ? data.containers : [];
       const list = document.getElementById('conteneurs-list');
       if (containers.length === 0){
-        list.innerHTML = '<li class="widget-empty" style="background:none; padding:10px 0;">Aucune shulker box ou enderchest suivie pour l\'instant.</li>';
+        list.innerHTML = '<li class="widget-empty">Aucune shulker box ou enderchest suivie pour l\'instant.</li>';
         return;
       }
-      // les conteneurs nommés d'abord (déjà trié côté script), on en montre 6 max ici
       list.innerHTML = containers.slice(0, 6).map(c => {
         const label = c.name ? `« ${c.name} »` : `${c.x}, ${c.y}, ${c.z}`;
         const zonePart = c.zone ? ` (${c.zone})` : '';
@@ -292,7 +317,7 @@
       }).join('');
     })
     .catch(() => {
-      document.getElementById('conteneurs-list').innerHTML = '<li class="widget-offline" style="background:none; padding:10px 0;">conteneurs-config.json non trouvé.</li>';
+      document.getElementById('conteneurs-list').innerHTML = '<li class="widget-offline">conteneurs-config.json non trouvé.</li>';
     });
 
   // ===================== GRILLE D'ÉQUIPEMENT (Grimoire) =====================
@@ -359,7 +384,6 @@
           `).join('');
           detail.classList.add('show');
         });
-        // hover desktop : affiche aussi au survol, sans bloquer le clic
         el.addEventListener('mouseenter', () => el.click());
       });
     })
